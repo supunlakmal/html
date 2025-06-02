@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Data Dashboard</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #0D1117;color: #C9D1D9;}
+        .chart-container {
+            background-color: #161B22;border: 1px solid #30363D;border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .text-highlight {
+            color: #58A6FF;}
+        .text-muted {
+            color: #8B949E;}
+        .grid-line {
+            stroke: #30363D;}
+        .data-point {
+            fill: #58A6FF;}
+        .axis-label {
+            fill: #8B949E;
+            font-size: 0.75rem;
+        }
+        .table-header {
+            color: #8B949E;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #30363D;
+        }
+        .table-row {
+            border-bottom: 1px solid #21262D;}
+        .table-cell {
+            padding: 6px 0;
+            font-size: 0.875rem;
+        }
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .status-green { background-color: #3FB950; }.status-yellow { background-color: #D29922; }.status-red { background-color: #F85149; }::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #161B22;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #30363D;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #58A6FF;
+        }
+    </style>
+</head>
+<body class="p-4">
+<header class="flex justify-between items-center mb-6 pb-4 border-b border-gray-700">
+<div class="text-sm text-muted">
+<span class="mr-4">#0071ZU</span>
+<span class="mr-4">1.201.301.24</span>
+<span>Output.stat -407E</span>
+</div>
+<div class="text-sm text-highlight">
+            V2.1 / APP.X / BUILD 20231204-X1209E
+        </div>
+<div class="text-sm text-muted">
+<span class="mr-4">#0071ZU</span>
+<span class="mr-4">1.201.301.24</span>
+<span>Output.stat -407E</span>
+</div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="space-y-4">
+<div class="chart-container">
+<div class="flex justify-between items-center mb-2">
+<h2 class="text-sm font-semibold text-highlight">ETA FEED: ANYMODE GOOD</h2>
+<span class="text-xs text-muted">Output.stat -407E</span>
+</div>
+<img alt="Abstract network graph visualization" class="w-full h-auto rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw9DCt7_kKL9VnWwWB-reO2RsVwH4rOkyydw11l7YVxrz3E54ST-1kET9cWiKVDAbw_c1OJaPnz9t3GrLO44joAuuE55EUPyvO9XCHidVEOiqmveHoVgvdleKwvnlnKJ8fhqXHawPxb4GEEGRnpV_4nk8jV4JqelnJEf4f4Li0h8baCsXe3x4nt5sf309_9ykrpe-hpBtzRnWUk9J7rWqkAuw6n_jLvKBYEigl1owIujoDOLRT9JAINGG_xysCJTA2GR924_cLaEc"/>
+<div class="flex justify-between items-center mt-2 text-xs text-muted">
+<span>TARGET ID#23</span>
+<span>2023.12.03 12:09:34</span>
+</div>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">9S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">1S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">LS</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">+4S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">9000M+</span><span class="text-muted">CAP</span></div>
+</div>
+</div>
+<div class="chart-container">
+<div class="flex justify-between items-center mb-2">
+<h2 class="text-sm font-semibold text-highlight">ETA FEED: ANYMODE GOOD</h2>
+</div>
+<img alt="Circular progress indicator" class="w-24 h-24 mx-auto my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDar28INcNsTDJC4alV-_W0BFnm--gLSO4tosHaTT48zNXpRjaNnLAqBGwTHttFBgDAxLe9F7N-3Ee9Xw7Z6RuZrm69jDIrm3Hn0KKU2tiKau-DcQqbxSkwDtGPoPfdnYKn79WHqqSKNiI5U0mT0Uj7bMvoaND3esWtQ0V0gtzu6mqB-MDjdPx4RThEI-CLQQqYQ0HQCNJy-PDwfcclV-iUMKBLqewlyxQ48qynYbhnF4YKoxhFGlhITFahlqdr7X7Yr91WHxtz-gA"/>
+<div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs mt-3">
+<span class="text-muted">MACRO# 123T</span> <span class="text-highlight text-right">8204</span>
+<span class="text-muted">VECTOR-ID</span> <span class="text-highlight text-right">523</span>
+<span class="text-muted">ASYNCH-001</span> <span class="text-highlight text-right">72723</span>
+<span class="text-muted">4500M+9894</span> <span class="text-highlight text-right">900M</span>
+<span class="text-muted">CYCLES</span> <span class="text-highlight text-right">CYP</span>
+</div>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">9S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">1S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">LS</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">+4S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">9000M+</span><span class="text-muted">CAP</span></div>
+</div>
+</div>
+<div class="chart-container">
+<div class="flex justify-between items-center mb-2">
+<h2 class="text-sm font-semibold text-highlight">TARGET S</h2>
+<span class="text-xs text-muted">2023.12.03 12:09:34</span>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs mt-3">
+<span class="text-muted">#00027 F</span> <span class="text-highlight text-right">34220 -005 03</span>
+<span class="text-muted">#00027 F</span> <span class="text-highlight text-right">34220 -005 03</span>
+<span class="text-muted">WAYPOINT</span> <span class="text-highlight text-right">97</span>
+<span class="text-muted">87838.7832</span> <span class="text-highlight text-right">E64</span>
+</div>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">9S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">1S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">LS</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">+4S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">9000M+</span><span class="text-muted">CAP</span></div>
+</div>
+</div>
+<div class="chart-container">
+<img alt="Waveform data visualization" class="w-full h-auto rounded my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNEoEntNsQXgf2H4s8LtxoFhOB1lOvVuqTC6e-aIiom8u_ZPMPy09Be0ejftYNyCcIeTCMk0O-CvGCQZAq08OgKSWIwLJMZ5kumFcXvNga8L8SgW7S7CKlxOF9ugjcqBoUhJnrGjHjh9_jlTB_98CWHdGxK-RBY3AsILoQ2hRYRZixSZckxruQpmGXJXNbzX6ydvesKOxYEi3Vy70jTPKuq8VLuI7vVPlB0lVB9E-HloZEKL5AoaWgrEULBrF9HF2JDrIlSCWjJEw"/>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">78927-8827</span></div>
+<div class="text-center"><span class="block text-highlight">803</span><span class="text-muted">823</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">HS</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">HS</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">740</span></div>
+</div>
+</div>
+<div class="chart-container">
+<img alt="Complex waveform data visualization with multiple lines" class="w-full h-auto rounded my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4mlI36QkvvZSj2Eci_MlVFGTYSesLFlHU56JLDR9-508rqcx-lFNXNm9R-4a-e-dDg2dHA1tnQqrqY9YfFC-w_FQPCQhnrh6bivkVcqvlFruchwW4vDTyU0YmgtCQyA6iORiHTwZZfUtnSDOlxk-mAiWYf2q88UjPpLfViNK2diWpQJW_lXMquY1klcvsdV4pfjXSHxMGb3tEIAnh_0lPQMQmyBgFW_zby2WE-nUttVz8-IxJcEyHTad7unkAEdzgZTv5klcGH70"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="chart-container">
+<div class="flex justify-between items-center mb-2">
+<h2 class="text-sm font-semibold text-highlight">ETA FEED: ANYMODE GOOD</h2>
+<span class="text-xs text-muted">Output.stat -407E</span>
+</div>
+<img alt="Abstract network graph visualization, variant 2" class="w-full h-auto rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlKoI7GfE0N1OTi7aB_w3JLoXJBdtP-nhZQ3Kpo5RdP7w9K_LIu9auelr1kIczjwlpyL5KO97C9dyUIZ83XcjeLp7rmSKFFMch8cQjf6_yuYYppQBOaydt6z-DcPHA0NP8mAPZnaMvaijS20tVPkXj1H-tbUT6XfrNyy7svadSz70q3kxMAkwucdsJFgtRj1Fhn1PMtG_65Smu_nydWkxolaLnBAyPQcOAFRZJF5AaZhc8-pt6GxDrlemHdNubV0bFyqlE4ID0YNM"/>
+<div class="flex justify-between items-center mt-2 text-xs text-muted">
+<span>TARGET ID#23</span>
+<span>2023.12.03 12:09:34</span>
+</div>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">9S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">1S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">LS</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">+4S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">9000M+</span><span class="text-muted">CAP</span></div>
+</div>
+</div>
+<div class="chart-container">
+<div class="flex justify-between items-center mb-2">
+<h2 class="text-sm font-semibold text-highlight">ETA FEED: ANYMODE GOOD</h2>
+</div>
+<img alt="Circular progress indicator, variant 2" class="w-24 h-24 mx-auto my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdi2vC-01PhF_fCcKINDrkulVBxW4lWvV7r1iwjI_6Ivwtk2d4w_btLJQ2Eh-4vgdQniK6FhcfC0YNm1QB_IvkLKCLbEnF3ndXxOIvUbMfEyjCfu9erJJSv4DLQn2w2ZhWeK9eAouX44UaKst5A0yoP4rOVJ86WHaCdbFr2YwBKcfme7lh7HXrsWndPRiHMnBm_qsX1L3d1NzmrLd20ItpgQylUJ0wPHOJ8AzFwusxcU5xfCnuEpO5BUPAgINOyQLEoC3utywhNkw"/>
+<div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs mt-3">
+<span class="text-muted">MACRO# 123T</span> <span class="text-highlight text-right">8204</span>
+<span class="text-muted">VECTOR-ID</span> <span class="text-highlight text-right">523</span>
+<span class="text-muted">ASYNCH-001</span> <span class="text-highlight text-right">72723</span>
+<span class="text-muted">4500M+9894</span> <span class="text-highlight text-right">900M</span>
+<span class="text-muted">CYCLES</span> <span class="text-highlight text-right">CYP</span>
+</div>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">9S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">1S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">LS</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">+4S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">9000M+</span><span class="text-muted">CAP</span></div>
+</div>
+</div>
+<div class="chart-container">
+<div class="flex justify-between items-center mb-2">
+<h2 class="text-sm font-semibold text-highlight">TARGET S</h2>
+<span class="text-xs text-muted">2023.12.03 12:09:34</span>
+</div>
+<div class="grid grid-cols-2 gap-x-4 gap-y-1 text-xs mt-3">
+<span class="text-muted">#00027 F</span> <span class="text-highlight text-right">34220 -005 03</span>
+<span class="text-muted">#00027 F</span> <span class="text-highlight text-right">34220 -005 03</span>
+<span class="text-muted">WAYPOINT</span> <span class="text-highlight text-right">97</span>
+<span class="text-muted">87838.7832</span> <span class="text-highlight text-right">E64</span>
+</div>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">9S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">1S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">LS</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">+4S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">9000M+</span><span class="text-muted">CAP</span></div>
+</div>
+</div>
+<div class="chart-container">
+<img alt="Waveform data visualization, variant 2" class="w-full h-auto rounded my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdJTxEwOM_JAzBcO8kT-OhupWKDuB6C61FhC8-lVy6GPgmAtfoZpe20wxXDFssZJs4nqXFR92NiUrnYZOu9lTqiuz7-cmbL4U1588iJ5BpNePQeY2FzpxBzaAm9HbJexh86iQ_QWJjFrhdBzdw47rYSZ4UA-O3ZEBasoUoxtySRDZN6YadxN1S4lEvAudGBm6IIQjSDPUTrWL6UEKhFtrkL7cm-GP-VhS-xozwem7CqjTtiM2a1NtkkxMgJkEQx7qtb4YUKZ8TaSA"/>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">78927-8827</span></div>
+<div class="text-center"><span class="block text-highlight">803</span><span class="text-muted">823</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">HS</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">HS</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">740</span></div>
+</div>
+</div>
+<div class="chart-container">
+<img alt="Multiple circular dial indicators" class="w-full h-auto rounded my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJFxXSzExcbscVk4MzqVRmY6rL9QuqzkzNx9BtUAofNJQ22BanQeXuSVavm7nw-JpRAu36nsD2XY9SIBN8cB_XFpsryA-x7caPpXkPL-OLFODtszA6Zs7k2YEEzbpuOfaKYDN12cDoMNoSvfVee3erMz3gmMktrIgz0m6OHNUqxMRpWeNW8v_hU3_iP3RNdjGX-XNbRzV0psr6v-boDjFR94vBSvu_Zui3pmqWvZBATiXdSiZmrgKfRHKC5i2mxM51TYz7VPEs_6M"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="chart-container">
+<div class="flex justify-between items-center mb-2">
+<h2 class="text-sm font-semibold text-highlight">ETA FEED: ANYMODE GOOD</h2>
+<span class="text-xs text-muted">Output.stat -407E</span>
+</div>
+<img alt="Abstract network graph visualization, variant 3" class="w-full h-auto rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDps5yokZB0LimsdJvxlILLMAi0UgjoV3hEj33ppRztt6Mo0p9kBq1aCC6MbLEIJoKIclYXgIhSWV3UYRbxoem7zlZfKrAJutOjURUTvPFJz5Td_DJFGXvqxSzeVcjscf7Nu7LvHrsxIbtwWxv1GmwFlZZdWlzlH1HbwOJapkNjV15p2hAWdlzgoWRd6fgYsrWSKN_TwW67-2DHNVsgYyquHjnPk7Z5qGsKthikFdww20kkIWN-jet0mZ27Y97nTHa5uxi3rxmYfI"/>
+<div class="flex justify-between items-center mt-2 text-xs text-muted">
+<span>TARGET ID#23</span>
+<span>2023.12.03 12:09:34</span>
+</div>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">9S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">1S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">LS</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">+4S</span><span class="text-muted">CY</span></div>
+<div class="text-center"><span class="block text-highlight">9000M+</span><span class="text-muted">CAP</span></div>
+</div>
+</div>
+<div class="chart-container">
+<img alt="Waveform data visualization, variant 3" class="w-full h-auto rounded my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwzz0BsqZBMgSfRdAulOOaWwLtNhvoYvyFfhTPgbiZL-oiTu01_niYXP9SHL-9VbvX51Mk1QhZ9RdtBi0JXhqlXZcHiNwSR3FyFHiyJXhCsgMhGFYizfr5QKqjYzVZxsn11yZFOwr5apBVbx-sJNw5nxrCeUuPt0LyoSsBepIWGVZGVpCj_olxwnnfSrutaDtf0TP-nuv4Mjb-9Gp8Z3owhanSvFYb7tCT2J_kIjDLec5ATOYlmg53BIeA8OVO_i9sVyM_AA3i-Vs"/>
+<div class="grid grid-cols-5 gap-2 mt-3 text-xs">
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">78927-8827</span></div>
+<div class="text-center"><span class="block text-highlight">803</span><span class="text-muted">823</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">HS</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">HS</span></div>
+<div class="text-center"><span class="block text-highlight">HS</span><span class="text-muted">740</span></div>
+</div>
+</div>
+<div class="chart-container">
+<img alt="Detailed waveform data visualization" class="w-full h-auto rounded my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0KvYRDePy-RiVwLoqRrOHaoCIU80bte3bJNJFKaEzFfmgfeNifWyOY5B44PT35m7MZ_NBwzaCsqtydR3F6BjN_3bzHSOkMuCS-TJiNOiJcsLE1WPtfddgzAYHGQBeko1QA8QjqETU6uG2BSQZFu2jD0EtWl4ba41YGFdVmSRyYllponvdg8A2jsltA39wvLjNpRr5IWbFy6e8pu6E5gfIcWcBlsS2coM-5zYnRzZ2HdoOUXr9Bc1ufDYGTJd2cO3yq4BNCZYQDxo"/>
+</div>
+<div class="chart-container">
+<img alt="Multiple circular dial indicators, variant 2" class="w-full h-auto rounded my-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6J3q0MLPjLAQyotjMmEfipCDLDmKq6qJGfYvvpmr1jIMe4u7kcmdiqJRmhSuQC1rooiVmjFo1l7Mi6bqkXPnnfHH8ghZ7ELqaKt9wI2F3xcmpfBNWdvAXvEUx2ErxVb5hFP_USnD7uokG8ig0ngW7TL6ADewSWLr8kYLEWFc1OoeIYkV5NW8k-XOaJ0QLQkARPaiitxxP5smLuaYeeb0kSDgINw96yuCxVm00xNA4BxLQqNUlYbR1cEcHYeWReUBqlI1tfxqIXDU"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="chart-container">
+<h2 class="text-sm font-semibold text-highlight mb-3">DATA CHARTS</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-xs">
+<thead>
+<tr class="table-header">
+<th class="text-left font-normal">DATSTRING</th>
+<th class="text-right font-normal">23S</th>
+<th class="text-right font-normal">97M</th>
+<th class="text-right font-normal">L-2N</th>
+<th class="text-right font-normal">24</th>
+<th class="text-right font-normal">REQUISIT</th>
+<th class="text-right font-normal">225</th>
+<th class="text-right font-normal">A28*</th>
+<th class="text-right font-normal">H-X</th>
+<th class="text-right font-normal">BS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="table-row">
+<td class="table-cell text-highlight">BAHYDECA</td>
+<td class="table-cell text-right">738</td>
+<td class="table-cell text-right">57M</td>
+<td class="table-cell text-right">L 1H</td>
+<td class="table-cell text-right">28</td>
+<td class="table-cell text-right">REQUISIT</td>
+<td class="table-cell text-right">209</td>
+<td class="table-cell text-right">F1M</td>
+<td class="table-cell text-right">+5</td>
+<td class="table-cell text-right">84</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">NUKNULDA</td>
+<td class="table-cell text-right">231</td>
+<td class="table-cell text-right">24K</td>
+<td class="table-cell text-right">MALD</td>
+<td class="table-cell text-right">26</td>
+<td class="table-cell text-right">GLASDEC2</td>
+<td class="table-cell text-right">9904</td>
+<td class="table-cell text-right">F72</td>
+<td class="table-cell text-right">+7</td>
+<td class="table-cell text-right">K2</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">OTACATICN</td>
+<td class="table-cell text-right">383</td>
+<td class="table-cell text-right">38K</td>
+<td class="table-cell text-right">OTAC</td>
+<td class="table-cell text-right">94</td>
+<td class="table-cell text-right">GLASDE23</td>
+<td class="table-cell text-right">8929</td>
+<td class="table-cell text-right">NUL2</td>
+<td class="table-cell text-right">NULN</td>
+<td class="table-cell text-right">24</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">NULNUKLA</td>
+<td class="table-cell text-right">320</td>
+<td class="table-cell text-right">78K</td>
+<td class="table-cell text-right">ATON</td>
+<td class="table-cell text-right">M7</td>
+<td class="table-cell text-right">SCATKING</td>
+<td class="table-cell text-right">2790</td>
+<td class="table-cell text-right">A4M</td>
+<td class="table-cell text-right">7AMK</td>
+<td class="table-cell text-right">24</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">RECLINER</td>
+<td class="table-cell text-right">703</td>
+<td class="table-cell text-right">78K</td>
+<td class="table-cell text-right">CA3P</td>
+<td class="table-cell text-right">F2</td>
+<td class="table-cell text-right">NULNUKL</td>
+<td class="table-cell text-right">8238</td>
+<td class="table-cell text-right">E29A</td>
+<td class="table-cell text-right">HSO2</td>
+<td class="table-cell text-right">L1</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">SCAVENGE</td>
+<td class="table-cell text-right">221</td>
+<td class="table-cell text-right">28S</td>
+<td class="table-cell text-right">T92M</td>
+<td class="table-cell text-right">R4</td>
+<td class="table-cell text-right">SCATKING</td>
+<td class="table-cell text-right">2848</td>
+<td class="table-cell text-right">E29A</td>
+<td class="table-cell text-right">HSO2</td>
+<td class="table-cell text-right">L1</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">DIZONLONG</td>
+<td class="table-cell text-right">888</td>
+<td class="table-cell text-right">22S</td>
+<td class="table-cell text-right">F72K</td>
+<td class="table-cell text-right">E9</td>
+<td class="table-cell text-right">DIZONFL2</td>
+<td class="table-cell text-right">872</td>
+<td class="table-cell text-right">F2KA</td>
+<td class="table-cell text-right">-2M</td>
+<td class="table-cell text-right">843</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">BACYDECA</td>
+<td class="table-cell text-right">221</td>
+<td class="table-cell text-right">27K</td>
+<td class="table-cell text-right">F1K</td>
+<td class="table-cell text-right">L2</td>
+<td class="table-cell text-right">WAYPOINT</td>
+<td class="table-cell text-right">9090</td>
+<td class="table-cell text-right">77AK</td>
+<td class="table-cell text-right">2AM</td>
+<td class="table-cell text-right">22</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">NUKNULDA</td>
+<td class="table-cell text-right">988</td>
+<td class="table-cell text-right">27K</td>
+<td class="table-cell text-right">WAYP</td>
+<td class="table-cell text-right">HS</td>
+<td class="table-cell text-right">GLASSEC2</td>
+<td class="table-cell text-right">2748</td>
+<td class="table-cell text-right">F27A</td>
+<td class="table-cell text-right">KSM</td>
+<td class="table-cell text-right">NUL</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">OTACATICN</td>
+<td class="table-cell text-right">282</td>
+<td class="table-cell text-right">02M</td>
+<td class="table-cell text-right">WELL</td>
+<td class="table-cell text-right">K2</td>
+<td class="table-cell text-right">LOREMIP</td>
+<td class="table-cell text-right">8742</td>
+<td class="table-cell text-right">A28M</td>
+<td class="table-cell text-right">NULL</td>
+<td class="table-cell text-right">NUL</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">DIZONLONG</td>
+<td class="table-cell text-right">888</td>
+<td class="table-cell text-right">22S</td>
+<td class="table-cell text-right">F72K</td>
+<td class="table-cell text-right">E9</td>
+<td class="table-cell text-right">DIZONFL2</td>
+<td class="table-cell text-right">872</td>
+<td class="table-cell text-right">F2KA</td>
+<td class="table-cell text-right">-2M</td>
+<td class="table-cell text-right">843</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">NUKNULDA</td>
+<td class="table-cell text-right">988</td>
+<td class="table-cell text-right">27K</td>
+<td class="table-cell text-right">WAYP</td>
+<td class="table-cell text-right">HS</td>
+<td class="table-cell text-right">GLASSEC2</td>
+<td class="table-cell text-right">2748</td>
+<td class="table-cell text-right">F27A</td>
+<td class="table-cell text-right">KSM</td>
+<td class="table-cell text-right">NUL</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="chart-container">
+<h2 class="text-sm font-semibold text-highlight mb-3">DATA CHARTS</h2>
+<img alt="Line graph with multiple data series and labels" class="w-full h-auto rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFoEvXUgCZy2dyusdtaNNfaE_NWrhDVNxeSprWa2SbH4mZqquSTH563R1x7PPSVpgV9EokqTisbKHqVicWYCvMrRCycEGhAwSg97IMpwlWkg9VRYrVpGSt5FZnKCxj9dhkhMevhga91A0VSMfCKzf7o4UP1bYt-TJCleYD0-5d7Hw_W28xaV0y3xDFC1apIVDMs5z9rk02D0C-9s6sD__PuXE8OSEH-UNpoJRzJv8nga5W5ocS-sEWRAuTqio9nexxYwCMrepfa_s"/>
+</div>
+<div class="chart-container">
+<div class="flex justify-between items-center mb-2">
+<h2 class="text-sm font-semibold text-highlight">WAVEFORM_DATA</h2>
+<span class="text-xs text-muted">23.2</span>
+</div>
+<div class="text-xs text-muted mb-2">DA_DATA</div>
+<div class="text-xs text-highlight mb-3">RANDOM_NUMBERS <span class="text-muted">123242</span></div>
+<div class="overflow-x-auto">
+<table class="w-full text-xs">
+<thead>
+<tr class="table-header">
+<th class="text-left font-normal">DATSTRING</th>
+<th class="text-right font-normal">23S</th>
+<th class="text-right font-normal">97M</th>
+<th class="text-right font-normal">L-2N</th>
+<th class="text-right font-normal">24</th>
+</tr>
+</thead>
+<tbody>
+<tr class="table-row">
+<td class="table-cell text-highlight">BAHYDECA_WAV_001</td>
+<td class="table-cell text-right">738</td>
+<td class="table-cell text-right">57M</td>
+<td class="table-cell text-right">L 1H</td>
+<td class="table-cell text-right">28</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">BAHYDECA_WAV_001</td>
+<td class="table-cell text-right">738</td>
+<td class="table-cell text-right">57M</td>
+<td class="table-cell text-right">L 1H</td>
+<td class="table-cell text-right">28</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">NUKNULDA_WAV_007</td>
+<td class="table-cell text-right">231</td>
+<td class="table-cell text-right">24K</td>
+<td class="table-cell text-right">MALD</td>
+<td class="table-cell text-right">26</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">NUKNULDA_WAV_007</td>
+<td class="table-cell text-right">231</td>
+<td class="table-cell text-right">24K</td>
+<td class="table-cell text-right">MALD</td>
+<td class="table-cell text-right">26</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">OTACATICN_WAV_002</td>
+<td class="table-cell text-right">383</td>
+<td class="table-cell text-right">38K</td>
+<td class="table-cell text-right">OTAC</td>
+<td class="table-cell text-right">94</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="text-xs text-highlight mt-4 mb-3">RANDOM_NUMBERS <span class="text-muted">123242</span></div>
+<div class="overflow-x-auto">
+<table class="w-full text-xs">
+<thead>
+<tr class="table-header">
+<th class="text-left font-normal">DATSTRING</th>
+<th class="text-right font-normal">23S</th>
+<th class="text-right font-normal">97M</th>
+<th class="text-right font-normal">L-2N</th>
+<th class="text-right font-normal">24</th>
+</tr>
+</thead>
+<tbody>
+<tr class="table-row">
+<td class="table-cell text-highlight">BAHYDECA_WAV_001</td>
+<td class="table-cell text-right">738</td>
+<td class="table-cell text-right">57M</td>
+<td class="table-cell text-right">L 1H</td>
+<td class="table-cell text-right">28</td>
+</tr>
+<tr class="table-row">
+<td class="table-cell text-highlight">NUKNULDA_WAV_007</td>
+<td class="table-cell text-right">231</td>
+<td class="table-cell text-right">24K</td>
+<td class="table-cell text-right">MALD</td>
+<td class="table-cell text-right">26</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
